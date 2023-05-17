@@ -7,6 +7,7 @@
       @close="onCloseCroppedImage"
       @crop-completed="onCroppedImage"
       :configs="field.croppingConfigs"
+      :minimumDimensions="field.minimumDimensions"
     />
 
     <draggable v-if="images.length > 0" v-model="images" class="gallery-list clearfix">

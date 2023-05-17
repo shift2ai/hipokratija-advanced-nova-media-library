@@ -25,6 +25,11 @@ class Images extends Media
         return $this;
     }
 
+    public function minimumDimensions($dimensions): self
+    {
+        return $this->withMeta(['minimumDimensions' => $dimensions]);
+    }
+
     public function croppable(bool $croppable): self
     {
         return $this->withMeta(compact('croppable'));
